@@ -1,0 +1,43 @@
+@use "../helpers/globals" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+
+header {
+  background-color: var(--ps-bg-color);
+  .navbar-toggler {
+    @include text-style(22px, null, #fff);
+    @include breakpoint("small-mobile") {
+      font-size: 18px;
+    }
+    border: 1px solid;
+    border-radius: 6px;
+    transition: $main-transition;
+    &:focus {
+      box-shadow: none;
+      border-color: var(--light-green-color);
+    }
+  }
+  .navbar-nav {
+    .nav-item a {
+      @include text-style(null, 500, #fff);
+      transition: $main-transition;
+      &:hover ,&.active {
+        color: var(--light-green-color);
+      }
+    }
+  }
+}
+.modal {
+  z-index: 99999 !important;
+}
+.modal-backdrop {
+  z-index: 9999 !important;
+}
+.sign-up {
+  label {
+    @include text-style(14px ,400 ,rgb(85, 68, 68))
+  }
+  .btn-close {
+    cursor: pointer;
+  }
+}

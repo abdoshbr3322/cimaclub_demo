@@ -1,0 +1,231 @@
+:root {
+  --main-color: #ff3150;
+  --main-color-alt: #ff3150d8;
+  --secondary-color: #ffc400;
+  --ps-bg-color: #19283f;
+  --section-bg-color: #eff7fa;
+  --light-green-color: #33d1cc;
+}
+
+.services .serv .number .icon, .main-heading .sub-heading::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-heading img {
+  margin-bottom: 24px;
+}
+.main-heading .sub-heading::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 15px);
+  width: 100px;
+  height: 2px;
+  background-color: #33d1cc;
+}
+
+.main-btn, .portfolio .categories .nav-item a.nav-link-active {
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  padding: 8px 15px;
+  border-radius: 22px;
+  transition: 0.3s;
+}
+@media (max-width: 575px) {
+  .main-btn, .portfolio .categories .nav-item a.nav-link-active {
+    font-size: 14px;
+  }
+}
+.main-btn:hover, .portfolio .categories .nav-item a.nav-link-active:hover {
+  background-color: var(--main-color-alt);
+}
+
+.btn.btn-primary {
+  --bs-btn-color: var(--secondary-color);
+  --bs-btn-hover-color: var(--secondary-color);
+  --bs-btn-active-color: var(--secondary-color);
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-hover-bg: var(--main-color);
+  --bs-btn-active-bg: var(--main-color);
+  --bs-btn-border-color: var(--main-color);
+  --bs-btn-hover-border-color: var(--main-color);
+  --bs-btn-active-border-color: var(--main-color);
+  --bs-btn-border-radius: 20px;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+option,
+textarea,
+button {
+  border: none;
+  outline: none;
+}
+
+header {
+  background-color: var(--ps-bg-color);
+}
+header .navbar-toggler {
+  font-size: 22px;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+@media (max-width: 575px) {
+  header .navbar-toggler {
+    font-size: 18px;
+  }
+}
+header .navbar-toggler:focus {
+  box-shadow: none;
+  border-color: var(--light-green-color);
+}
+header .navbar-nav .nav-item a {
+  font-weight: 500;
+  color: #fff;
+  transition: 0.3s;
+}
+header .navbar-nav .nav-item a:hover, header .navbar-nav .nav-item a.active {
+  color: var(--light-green-color);
+}
+
+.modal {
+  z-index: 99999 !important;
+}
+
+.modal-backdrop {
+  z-index: 9999 !important;
+}
+
+.sign-up label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(85, 68, 68);
+}
+.sign-up .btn-close {
+  cursor: pointer;
+}
+
+.banner {
+  background-color: var(--ps-bg-color);
+  padding: 60px 0;
+}
+.banner .sub-heading {
+  margin-bottom: 35px;
+}
+
+.services .serv .number {
+  font-size: 192px;
+  font-weight: bold;
+  color: #eff7fa;
+}
+.services .serv .number .icon {
+  font-size: 68px;
+  color: var(--light-green-color);
+}
+.services .serv .title {
+  color: var(--secondary-color);
+}
+.services .serv p.info {
+  font-weight: 700;
+  line-height: 2;
+}
+
+.portfolio {
+  background-color: var(--section-bg-color);
+}
+.portfolio .categories .nav-item a {
+  font-weight: bold;
+  color: #212529;
+}
+.portfolio .categories .nav-item a:hover:not(.nav-link-active) {
+  color: var(--main-color);
+}
+.portfolio .categories .nav-item a.nav-link-active:hover {
+  background-color: var(--main-color);
+}
+.portfolio .project {
+  border: 5px solid #fff;
+}
+.portfolio .project .overlay {
+  z-index: 99;
+  font-size: 23px;
+  font-weight: bold;
+  background-color: rgba(51, 209, 204, 0.797);
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.portfolio .project:hover .overlay {
+  transform: translateX(0);
+}
+
+.about p.info {
+  max-width: 500px;
+}
+
+.contact {
+  background-color: var(--section-bg-color);
+}
+.contact .heading h3 {
+  font-size: 28px;
+  color: var(--secondary-color);
+}
+.contact .member .name {
+  background-color: var(--light-green-color);
+}
+
+.start-project {
+  background-color: var(--ps-bg-color);
+}
+
+.subscribe {
+  background-color: var(--secondary-color);
+}
+.subscribe form input[type=email] {
+  border-bottom: 1px solid white;
+}
+.subscribe form input[type=email]::placeholder {
+  color: white;
+}
+.subscribe form [type=submit] {
+  background-color: var(--ps-bg-color);
+  color: var(--secondary-color);
+}
+
+footer {
+  background-color: var(--ps-bg-color);
+}
+
+/*# sourceMappingURL=styles.css.map */

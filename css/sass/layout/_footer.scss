@@ -1,0 +1,7 @@
+@use "../helpers/globals" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+
+footer {
+  background-color: var(--ps-bg-color);
+}

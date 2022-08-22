@@ -1,0 +1,12 @@
+@use "./sass/helpers/globals" as *;
+@use "./sass/helpers/mixins" as *;
+@use "./sass/helpers/placeholders" as *;
+@use "./sass/components/heading";
+@use "./sass/components/btns";
+@use "./sass/components/cards";
+@use "./sass/customize";
+@use "./sass/rules";
+@use "./sass/layout/header";
+@use "./sass/pages/home";
+@use "./sass/layout/footer";
+

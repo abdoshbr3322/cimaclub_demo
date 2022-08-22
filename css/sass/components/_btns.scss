@@ -1,0 +1,17 @@
+@use "../helpers/globals" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+
+.main-btn {
+  @include text-style(17px ,bold ,var(--secondary-color));
+  @include breakpoint("small-mobile") {
+    font-size: 14px;
+  }
+  background-color: var(--main-color);
+  padding: 8px 15px;
+  border-radius: 22px;
+  transition: $main-transition;
+  &:hover {
+    background-color: var(--main-color-alt);
+  }
+}

@@ -1,0 +1,105 @@
+@use "../helpers/globals" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/placeholders" as *;
+@use "../components/btns";
+
+.banner {
+  background-color: var(--ps-bg-color);
+  padding: 60px 0;
+  .sub-heading {
+    margin-bottom: 35px;
+  }
+}
+.services {
+  .serv {
+    .number {
+      @include text-style(192px, bold, #eff7fa);
+      .icon {
+        @extend %el-centered-h;
+        @include text-style(68px, null, var(--light-green-color));
+      }
+    }
+    .title {
+      color: var(--secondary-color);
+    }
+    p.info {
+      @include text-style(null, 700, null, 2);
+    }
+  }
+}
+.portfolio {
+  background-color: var(--section-bg-color);
+  .categories {
+    .nav-item a {
+      @include text-style(null, bold, #212529);
+      &:hover:not(.nav-link-active) {
+        color: var(--main-color);
+      }
+      &.nav-link-active {
+        @extend .main-btn;
+        &:hover {
+          background-color: var(--main-color);
+        }
+      }
+    }
+  }
+  .project {
+    border: 5px solid #fff;
+    .overlay {
+      z-index: 99;
+      @include text-style(23px, bold);
+      background-color: rgba(51, 209, 204, 0.797);
+      @include prefixer(
+        transform,
+        translateX(-100%),
+        ("moz", "webkit", "ms", "o")
+      );
+      @include prefixer(
+        transition,
+        $main-transition,
+        ("moz", "webkit", "ms", "o")
+      );
+    }
+    &:hover {
+      .overlay {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+.about {
+  p.info {
+    max-width: 500px;
+  }
+}
+.contact {
+  background-color: var(--section-bg-color);
+  .heading {
+    h3 {
+      @include text-style(28px, null, var(--secondary-color));
+    }
+  }
+  .member {
+    .name {
+      background-color: var(--light-green-color);
+    }
+  }
+}
+.start-project {
+  background-color: var(--ps-bg-color);
+}
+.subscribe {
+  background-color: var(--secondary-color);
+  form {
+    input[type="email"] {
+      border-bottom: 1px solid white;
+      &::placeholder {
+        color: white;
+      }
+    }
+    [type=submit] {
+      background-color: var(--ps-bg-color);
+      color: var(--secondary-color)
+    }
+  }
+}
